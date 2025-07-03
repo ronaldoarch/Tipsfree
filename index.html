@@ -212,6 +212,63 @@
         border-radius: 10px;
       }
     }
+    .img-comprovante {
+      display: block;
+      margin: 18px auto;
+      max-width: 320px;
+      width: 90%;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px 0 #00000033, 0 0 0 3px #3AC85B33;
+      border: 2.5px solid #3AC85B;
+      background: #fff;
+      object-fit: cover;
+    }
+    .img-top { margin-top: 0; }
+    .img-middle { margin: 18px auto; }
+    .img-bottom { margin-bottom: 0; }
+    @media (max-width: 600px) {
+      .img-comprovante {
+        max-width: 98vw;
+        border-radius: 10px;
+      }
+    }
+    /* Estilos para imagens de comprovantes no background */
+    .bg-comprovante {
+      position: fixed;
+      z-index: 0;
+      opacity: 0.35;
+      pointer-events: none;
+      border-radius: 18px;
+      object-fit: cover;
+      transition: opacity 0.3s;
+    }
+    .bg-top-left {
+      top: 12vh;
+      left: 10vw;
+      width: 220px;
+      max-width: 28vw;
+    }
+    .bg-bottom-right {
+      bottom: 12vh;
+      right: 10vw;
+      width: 220px;
+      max-width: 28vw;
+    }
+    .bg-center-left {
+      top: 50%;
+      left: 5vw;
+      transform: translateY(-50%);
+      width: 180px;
+      max-width: 22vw;
+    }
+    @media (max-width: 800px) {
+      .bg-comprovante {
+        width: 120px !important;
+        max-width: 40vw !important;
+        opacity: 0.22;
+      }
+    }
   </style>
 
   <!-- Meta Pixel Code -->
@@ -254,6 +311,10 @@
 
 </head>
 <body>
+  <!-- Imagens de comprovantes espalhadas pelo background -->
+  <img src="comprovante1.jpg" alt="Comprovante 1" class="bg-comprovante bg-top-left">
+  <img src="comprovante2.jpg" alt="Comprovante 2" class="bg-comprovante bg-bottom-right">
+  <img src="comprovante3.jpg" alt="Comprovante 3" class="bg-comprovante bg-center-left">
   <span class="moedas moeda1">💰</span>
   <span class="moedas moeda2">💰</span>
   <span class="moedas moeda3">💰</span>
@@ -261,7 +322,6 @@
   <span class="trevo trevo1">☘️</span>
   <span class="trevo trevo2">☘️</span>
   <div class="container">
-    <img src="Jogos.png" alt="Jogos" class="img-jogos">
     <span class="character">🧑‍💼</span>
     <h1>Transforme seu conhecimento em lucro com as melhores dicas de apostas!</h1>
     <div class="desc">Siga estratégias testadas, ganhe consistência e eleve seu jogo.</div>
