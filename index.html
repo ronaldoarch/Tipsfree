@@ -346,22 +346,9 @@
     </a>
   </div>
   <script>
-        // Redireciona ao clicar em qualquer lugar da página
+    // Sem redirecionamentos automáticos
     document.addEventListener('DOMContentLoaded', function() {
-      document.body.addEventListener('click', function(e) {
-        // Evita múltiplos redirecionamentos
-        if (!window._redirected) {
-          window._redirected = true;
-          window.location.href = 'https://wa.me/46988048486';
-        }
-      });
-      // Redireciona automaticamente após 20 segundos
-      setTimeout(function() {
-        if (!window._redirected) {
-          window._redirected = true;
-          window.location.href = 'https://wa.me/46988048486';
-        }
-      }, 20000);
+      // Página carregada sem redirecionamentos
     });
   </script>
 </body>
