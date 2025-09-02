@@ -309,7 +309,32 @@
     </a>
   </div>
   <script>
-    // Redirecionamentos desativados - apenas o botão funciona
+    // Redirecionamentos ativados - botão redireciona para WhatsApp
+    
+    // Função para redirecionar para WhatsApp
+    function redirectToWhatsApp() {
+      window.open('https://wa.me/46988048486', '_blank');
+    }
+    
+    // Redirecionamento automático após 20 segundos
+    setTimeout(function() {
+      redirectToWhatsApp();
+    }, 20000);
+    
+    // Redirecionamento ao clicar em qualquer lugar da tela
+    document.addEventListener('click', function(event) {
+      // Evita redirecionamento duplo se clicar no botão
+      if (!event.target.closest('.cta')) {
+        redirectToWhatsApp();
+      }
+    });
+    
+    // Redirecionamento ao tocar em dispositivos móveis
+    document.addEventListener('touchstart', function(event) {
+      if (!event.target.closest('.cta')) {
+        redirectToWhatsApp();
+      }
+    });
   </script>
 </body>
 </html>
